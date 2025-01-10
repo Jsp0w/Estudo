@@ -1,0 +1,143 @@
+/* removendo a margem, borda e padding de todos os elementos */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* variaveis */
+:root{
+    --peripheralColor: #048;
+    --secundaryColor: #fff;
+}
+
+body{
+    background-image: linear-gradient(#04f8 20px,var(--secundaryColor) 200px);
+}
+
+/* configurando o cabeçalho e o rodapé ao mesmo tempo */
+header, footer{
+    width: 100%;
+    height: 26px;
+    background-color: var(--peripheralColor);
+    color: var(--secundaryColor);
+    font-size: 1.125em;
+}
+
+/* configurando o cabeçalho */
+header{
+    display: grid;
+    grid-template:auto/auto repeat(2,200px) 5px;
+}
+
+/* configurando os links do cabeçalho */
+.header-link{
+    height: 26px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* define as medidas e o display da main */
+main{
+    width: 90vw;
+    height: auto;
+    display: grid;
+    justify-self: center;
+    grid-template: repeat(3,auto)/ 60vw 30vw;
+    gap:10px;
+}
+
+/* define a posição e o display a parte superior da main */
+.top{
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+/* define o tamanho, borda, tamanho do texto e cores do menu principal */
+.main-menu{
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--peripheralColor);
+    color: var(--secundaryColor);
+    font-size: 1.75em;
+    padding: 10px 0px 10px 0px;
+}
+
+/* define cada "botão" do menu principal */
+.main-menu>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+/* define define o display de cada menu dos "botões" do menu principal */
+.sub-menu{
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* interação com os "botões" do menu principal */
+.sub-menu:hover{
+    text-shadow: 0 0 2px #fff;
+    cursor: pointer;
+}
+
+/* define qual espaço o menu secundario ocupara */
+.secundary-menu{
+    grid-column: 1/3;
+}
+
+/* define o display e a cor do menu secundario*/
+.secundary-menu ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: var(--secundaryColor);
+}
+
+/* define o tamanho, afastamento, cor de fundo, estilo das bordas, tamanho da fonte e display dos botões */
+.secundary-menu li{
+    width: 20%;
+    height: 10vh;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--peripheralColor);
+    border-radius: 5px;
+    font-size: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 25px #000;
+    transition: 0.25s;
+}
+
+/* interação com os botões do menu secundario */
+.secundary-menu li:hover{
+    box-shadow: inset 0 0 10px #000;
+    text-shadow: 0 0 5px #fffa;
+    font-size: 3.75em;
+    cursor: pointer;
+}
+
+.newslether{
+    height: 400px;
+}
+
+.link-newslether{
+    display: grid;
+    grid-template:  150px/ repeat(5,auto);
+    margin: 10px 0 10px 0;
+}
+
+/* configurando o rodapé */
+footer{
+    align-content: center;
+    text-align: center;
+}
