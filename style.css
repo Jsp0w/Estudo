@@ -57,6 +57,13 @@ main{
     align-items: left;
 }
 
+.logo{
+    width: 508px;
+    height: 168px;
+    font-size: 8em;
+    text-shadow: 0 0 10px #0008;
+}
+
 /* define o tamanho, borda, tamanho do texto e cores do menu principal */
 .main-menu{
     width: 100%;
