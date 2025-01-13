@@ -12,6 +12,9 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: linear-gradient(#04f8 20px,var(--secundaryColor) 200px);
 }
 
