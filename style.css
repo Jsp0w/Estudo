@@ -27,13 +27,13 @@ header, footer{
 /* configurando o cabeçalho */
 header{
     display: grid;
-    grid-template:auto/auto repeat(2,200px) 5px;
+    grid-template-columns:1fr repeat(2,150px) 10px;
 }
 
 /* configurando os links do cabeçalho */
 .header-link{
     height: 26px;
-    width: 200px;
+    width: 150px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -41,11 +41,12 @@ header{
 
 /* define as medidas e o display da main */
 main{
-    width: 90vw;
+    width: 80%;
     height: auto;
     display: grid;
     justify-self: center;
-    grid-template: repeat(3,auto)/ 60vw 30vw;
+    grid-template-columns:2fr 1fr;
+    grid-auto-rows: auto;
     gap:10px;
 }
 
@@ -58,7 +59,7 @@ main{
 }
 
 .logo{
-    width: 508px;
+    width: auto;
     height: 168px;
     font-size: 8em;
     text-shadow: 0 0 10px #0008;
@@ -67,11 +68,12 @@ main{
 /* define o tamanho, borda, tamanho do texto e cores do menu principal */
 .main-menu{
     width: 100%;
+    min-height: 50px;
     border-radius: 5px;
     background-color: var(--peripheralColor);
     color: var(--secundaryColor);
     font-size: 1.75em;
-    padding: 10px 0px 10px 0px;
+    align-content: center;
 }
 
 /* define cada "botão" do menu principal */
@@ -99,13 +101,14 @@ main{
 
 /* define qual espaço o menu secundario ocupara */
 .secundary-menu{
+    width: 100%;
     grid-column: 1/3;
 }
 
 /* define o display e a cor do menu secundario*/
 .secundary-menu ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
     color: var(--secundaryColor);
 }
@@ -113,7 +116,7 @@ main{
 /* define o tamanho, afastamento, cor de fundo, estilo das bordas, tamanho da fonte e display dos botões */
 .secundary-menu li{
     width: 20%;
-    height: 10vh;
+    height: 65px;
     padding: 5px 10px 5px 10px;
     background-color: var(--peripheralColor);
     border-radius: 5px;
@@ -127,19 +130,15 @@ main{
 
 /* interação com os botões do menu secundario */
 .secundary-menu li:hover{
-    box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 15px #000;
     text-shadow: 0 0 5px #fffa;
     font-size: 3.75em;
     cursor: pointer;
 }
 
-.newslether{
-    height: 400px;
-}
-
 .link-newslether{
-    display: grid;
-    grid-template:  150px/ repeat(5,auto);
+    display: flex;
+    gap: 30px;
     margin: 10px 0 10px 0;
 }
 
