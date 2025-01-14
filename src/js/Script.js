@@ -7,8 +7,8 @@ function linksCabecalho(){
         header[i].style.gridColumn = i==0? '2/3':'3/4';
         var header_text = document.createElement('span')
         header_text.append(i==0 ? 'Facebook': 'Playlist')
-        header[i].addEventListener('mouseover',function(){header[i].style.textShadow = '0 0 5px #fff';header[i].style.cursor = 'pointer';header[i].style.transition = '0.25s';})
-        header[i].addEventListener('mouseout',function(){header[i].style.textShadow = '0 0 0px #fff';header[i].style.transition = '0.25s'})
+        header[i].addEventListener('mouseover',function(){header[i].style.filter = 'drop-shadow(0 0 2px #fff8)';header[i].style.cursor = 'pointer';header[i].style.transition = '0.25s';})
+        header[i].addEventListener('mouseout',function(){header[i].style.filter = 'drop-shadow(0 0 0px #fff8)';header[i].style.transition = '0.25s'})
         header[i].appendChild(header_icon[i].mother_tag)
         header[i].appendChild(header_text)
     }

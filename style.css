@@ -98,7 +98,7 @@ main{
 
 /* interação com os "botões" do menu principal */
 .sub-menu:hover{
-    text-shadow: 0 0 2px #fff;
+    filter: drop-shadow(0 0 2px #fff);
     cursor: pointer;
 }
 
