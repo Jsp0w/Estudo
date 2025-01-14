@@ -82,7 +82,8 @@ export class TopMain extends HTMLElement{
 
             li:hover{
                 cursor: pointer;
-                text-shadow: 0 0 0.25rem #fff;
+                filter: drop-shadow(0 0 0.25rem #fff);
+                /*text-shadow: 0 0 0.25rem #fff;*/
             }
 
         `);
@@ -95,6 +96,7 @@ export class TopMain extends HTMLElement{
         
         for(let i=0; i<items;i++){
             const lista_item = document.createElement('li')
+            // lista_item.addEventListener('mouseover',function(){activetMenu(i)})
 
             const icone = document.createElement('ion-icon')
             icone.setAttribute('name', 'caret-back')
@@ -106,4 +108,8 @@ export class TopMain extends HTMLElement{
         
         return un_lista
     }
+
+    // scripts(){
+    //     var script = document.
+    // }
 }
