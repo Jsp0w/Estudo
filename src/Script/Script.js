@@ -1,11 +1,11 @@
 /* gera os links que ficam no cabeçalho */
 function linksCabecalho(){
-    var header = document.getElementsByClassName('header-link');
-    var header_icon = [new FbIcon('80%','#fff'), new MusicIcon('80%','#fff')]
+    const header = document.getElementsByClassName('header-link');
+    const header_icon = [new FbIcon('80%','#fff'), new MusicIcon('80%','#fff')]
 
     for (let i = 0; i < 2; i++) {
         header[i].style.gridColumn = i==0? '2/3':'3/4';
-        var header_text = document.createElement('span')
+        const header_text = document.createElement('span')
         header_text.append(i==0 ? 'Facebook': 'Playlist')
         header[i].addEventListener('mouseover',function(){header[i].style.filter = 'drop-shadow(0 0 2px #fff8)';header[i].style.cursor = 'pointer';header[i].style.transition = '0.25s';})
         header[i].addEventListener('mouseout',function(){header[i].style.filter = 'drop-shadow(0 0 0px #fff8)';header[i].style.transition = '0.25s'})
@@ -63,7 +63,7 @@ function manipulacaoMenu(menu_icon,activeted){
 
 /* gera as setas do menu prncipal */
 function setasMenu(){
-    var sub_menu = document.getElementsByClassName('sub-menu')
+    const sub_menu = document.getElementsByClassName('sub-menu')
     var menu_icon = []
 
     for (let i=0; i < sub_menu.length; i++){
@@ -80,16 +80,27 @@ setasMenu()
 
 var newslether = document.getElementsByClassName('link-newslether')
 
-function divAleatoria(){
-    var noticias = document.createElement('div')
+function divAleatoria(texto){
+    const noticias = document.createElement('div')
     noticias.style.height = '150px'
     noticias.style.width = '150px'
-    noticias.style.backgroundColor = '#f00'
+    noticias.style.display = 'flex'
+    noticias.style.flexDirection = 'column'
+    noticias.style.alignItems = 'center'
+    noticias.style.justifyContent = 'space-between'
+    
+    const imagens = document.createElement('div')
+    imagens.style.height = '125px'
+    imagens.style.width = '125px'
+    imagens.style.border = '1px solid #000'
+    
+    noticias.appendChild(imagens)
+    noticias.append(texto)
     return noticias
 }
 
 for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 4; j++) {
-        newslether[i].appendChild(divAleatoria())
+        newslether[i].appendChild(divAleatoria(i==0?`Noticia ${j+1}`:`Formação ${j+1}`))
     }
 }

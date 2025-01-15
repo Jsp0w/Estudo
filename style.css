@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(#04f8 20px,var(--secundaryColor) 200px);
+    background-image: linear-gradient(#04f8 20px, #eee 200px);
 }
 
 /* configurando o cabeçalho e o rodapé ao mesmo tempo */
@@ -50,7 +50,7 @@ main{
     justify-self: center;
     grid-template-columns:2fr 1fr;
     grid-auto-rows: auto;
-    gap:10px;
+    gap:20px;
 }
 
 /* define a posição e o display a parte superior da main */
@@ -65,6 +65,7 @@ main{
     width: auto;
     height: 168px;
     font-size: 8em;
+    color: #fc0;
     text-shadow: 0 0 10px #0008;
 }
 
@@ -77,6 +78,7 @@ main{
     color: var(--secundaryColor);
     font-size: 1.75em;
     align-content: center;
+    box-shadow: 5px 5px 10px #0008, -5px -5px 10px #fff8;
 }
 
 /* define cada "botão" do menu principal */
@@ -118,7 +120,7 @@ main{
 
 /* define o tamanho, afastamento, cor de fundo, estilo das bordas, tamanho da fonte e display dos botões */
 .secundary-menu li{
-    width: 20%;
+    width: min(215px, 20%);
     height: 65px;
     padding: 5px 10px 5px 10px;
     background-color: var(--peripheralColor);
@@ -133,16 +135,32 @@ main{
 
 /* interação com os botões do menu secundario */
 .secundary-menu li:hover{
-    box-shadow: inset 0 0 15px #000;
+    box-shadow: inset 0 0 5px #000;
     text-shadow: 0 0 5px #fffa;
     font-size: 3.75em;
     cursor: pointer;
 }
 
+.secao>span{
+    font-size: 1.5em;
+}
+
+.secao button{
+    font-size: 0.75em;
+    padding: 3px;
+    border: 1px solid #000;
+    margin-left: 10px;
+}
+
 .link-newslether{
     display: flex;
     gap: 30px;
+    font-size: 1em;
     margin: 10px 0 10px 0;
+}
+
+.informacoes ul{
+    list-style: none;
 }
 
 /* configurando o rodapé */
